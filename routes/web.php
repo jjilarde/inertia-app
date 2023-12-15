@@ -15,28 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home')->name('home');
-});
+    return Inertia::render('Home');
+})->name('home');
 
 Route::get('/about', function () {
-    return Inertia::render('About')->name('about');
-});
+    return Inertia::render('About');
+})->name('about');
 
 Route::get('/blog', function () {
-    return Inertia::render('Blog')->name('blog');
-});
+    return Inertia::render('Blog');
+})->name('blog');
 
 Route::get('/contact', function () {
-    return Inertia::render('Contact')->name('contact');
-});
+    return Inertia::render('Contact');
+})->name('contact');
 
 Route::get('/pages', function () {
-    return Inertia::render('Pages')->name('Pages');
-});
+    return Inertia::render('Pages');
+})->name('Pages');
 
 Route::get('/services', function () {
-    return Inertia::render('Services')->name('Services');
-});
+    return Inertia::render('Services');
+})->name('Services');
 
 
 
