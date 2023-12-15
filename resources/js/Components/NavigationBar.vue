@@ -52,5 +52,5 @@
             </div>
         </div>
     </div>
-    Bottom of NavBar
+    <!-- Bottom of NavBar -->
 </template>
