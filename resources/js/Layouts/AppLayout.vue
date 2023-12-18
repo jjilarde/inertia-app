@@ -1,5 +1,4 @@
 <script setup>
-<<<<<<< HEAD
 import { ref } from "vue";
 import { Head, Link, router } from "@inertiajs/vue3";
 import ApplicationMark from "@/Components/ApplicationMark.vue";
@@ -41,14 +40,3 @@ const logout = () => {
         <slot />
     </main>
 </template>
-=======
-import NavBar from '../Components/NavigationBar.vue';
-
-</script>
-<template>
-    <section>
-        <NavBar />
-    </section>
-<slot/>
-</template>
->>>>>>> main
