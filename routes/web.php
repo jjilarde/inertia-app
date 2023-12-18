@@ -16,6 +16,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -33,3 +34,32 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+=======
+    return Inertia::render('Home');
+})->name('home');
+
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+
+Route::get('/blog', function () {
+    return Inertia::render('Blog');
+})->name('blog');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
+Route::get('/pages', function () {
+    return Inertia::render('Pages');
+})->name('Pages');
+
+Route::get('/services', function () {
+    return Inertia::render('Services');
+})->name('Services');
+
+
+
+
+
+>>>>>>> main
