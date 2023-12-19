@@ -29,7 +29,33 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+
+    Route::get('/home', function () {
+        return Inertia::render('Home');
+    })->name('home');
+
+    Route::get('/about', function () {
+        return Inertia::render('About');
+    })->name('about');
+
+    Route::get('/blog', function () {
+        return Inertia::render('Blog');
+    })->name('blog');
+
+    Route::get('/services', function () {
+        return Inertia::render('Services');
+    })->name('services');
+
+    Route::get('/pages', function () {
+        return Inertia::render('Pages');
+    })->name('pages');
+
+    Route::get('/contact', function () {
+        return Inertia::render('Contact');
+    })->name('contact');
+
 });

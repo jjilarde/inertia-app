@@ -3,6 +3,6 @@ import AppLayout from '../Layouts/AppLayout.vue';
 </script>
 <template>
 <AppLayout>
-    <h1>Services</h1>
+    <h1>Blog</h1>
 </AppLayout>
 </template>
