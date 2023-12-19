@@ -20,7 +20,7 @@ const stats = [
 ];
 </script>
 <template>
-    <Head title ="AppLayout"/>
+    <Head title ="Home"/>
         <div
             class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32"
         >

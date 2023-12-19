@@ -2,69 +2,34 @@
 import { onMounted } from "vue";
 import { Link } from "@inertiajs/vue3";
 import { initFlowbite } from "flowbite";
+
 onMounted(() => {
     initFlowbite();
 });
 
+const navLinks = [
+    { name: "Home", href: route("home") },
+    { name: "About", href: route("about") },
+    { name: "Services", href: route("services") },
+    { name: "Pages", href: route("pages") },
+    { name: "Blog", href: route("blog") },
+    { name: "Contact", href: route("contact") },
+];
 </script>
 <template>
     <nav class="overflow-x-auto flex pl-36 mx-auto bg-white">
         <div class="flex">
-            <img src="images/tailwind.png" class="h-24 w-40" alt="" />
-        </div>
+            <Link :href="route('dashboard')">
+                <img src="images/tailwind.png" class="h-24 w-40 cursor-pointer" alt="" />
+            </Link>        </div>
         <div class="flex justify-center items-center space-x-16 mx-auto">
-            <div class="">
+            <div v-for="link in navLinks" :key="link.name">
                 <Link
-                    :href="route('home')"
-                    :class="$page.url ==='/home' ? ' text-blue-800' : ''"
+                    :href="link.href"
+                    :class="$page.url === link.href ? 'text-blue-800' : '' "
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
-                    Home
-                </Link>
-            </div>
-            <div class="">
-                <Link
-                    :href="route('about')"
-                    :class="$page.url ==='/about' ? ' text-blue-800' : ''"
-                    class="font-semibold hover:text-blue-800 focus:text-blue-800"
-                >
-                    About
-                </Link>
-            </div>
-            <div class="">
-                <Link
-                    :href="route('services')"
-                    :class="$page.url ==='/services' ? ' text-blue-800' : ''"
-                    class="font-semibold hover:text-blue-800 focus:text-blue-800"
-                >
-                    Services
-                </Link>
-            </div>
-            <div class="">
-                <Link
-                    :href="route('pages')"
-                    :class="$page.url ==='/pages' ? ' text-blue-800' : ''"
-                    class="font-semibold hover:text-blue-800 focus:text-blue-800"
-                >
-                    Pages
-                </Link>
-            </div>
-            <div class="">
-                <Link
-                    :href="route('blog')"
-                    :class="$page.url ==='/blog' ? ' text-blue-800' : ''"
-                    class="font-semibold hover:text-blue-800 focus:text-blue-800"
-                >
-                    Blog
-                </Link>
-            </div>
-            <div class="">
-                <Link
-                    :href="route('contact')"
-                    :class="$page.url ==='/contact' ? ' text-blue-800' : ''"
-                    class="font-semibold hover:text-blue-800 focus:text-blue-800"
-                >
-                    Contact
+                    {{ link.name }}
                 </Link>
             </div>
             <div class="flex justify-items-center space-x-12 pl-48">
