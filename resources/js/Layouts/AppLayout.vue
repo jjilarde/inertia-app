@@ -33,7 +33,9 @@ const logout = () => {
 </script>
 
 <template>
-    <NavBar />
+    <header>
+        <NavBar />
+    </header>
 
     <!-- Page Content -->
     <main>
