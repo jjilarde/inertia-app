@@ -1,5 +1,10 @@
 <script setup>
+import { Head } from '@inertiajs/vue3';
 import AppLayout from "../Layouts/AppLayout.vue";
+
+defineOptions({ 
+    layout: AppLayout
+})
 
 const links = [
     { name: "Open roles", href: "#" },
@@ -15,7 +20,7 @@ const stats = [
 ];
 </script>
 <template>
-    <AppLayout>
+    <Head title ="Home"/>
         <div
             class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32"
         >
@@ -126,5 +131,4 @@ const stats = [
                 </div>
             </div>
         </div>
-    </AppLayout>
 </template>
