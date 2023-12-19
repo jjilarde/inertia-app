@@ -11,7 +11,7 @@ onMounted(() => {
         <div class="flex">
             <img src="images/tailwind.png" class="h-24 w-40" alt="" />
         </div>
-        <div class="flex justify-center items-center space-x-16 mx-auto pr-96">
+        <div class="flex justify-center items-center space-x-16 mx-auto">
             <div class="">
                 <Link
                     :href="route('home')"
@@ -94,9 +94,9 @@ onMounted(() => {
             <div class="flex items-center">
                 <button
                     type="button"
-                    class="rounded-sm bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800"
+                    class="rounded-sm bg-blue-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-800"
                 >
-                    Button text
+                    Get A Quote
                 </button>
             </div>
         </div>
