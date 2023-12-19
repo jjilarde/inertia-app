@@ -5,6 +5,7 @@ import { initFlowbite } from "flowbite";
 onMounted(() => {
     initFlowbite();
 });
+
 </script>
 <template>
     <nav class="overflow-x-auto flex pl-36 mx-auto bg-white">
@@ -15,6 +16,7 @@ onMounted(() => {
             <div class="">
                 <Link
                     :href="route('home')"
+                    :class="$page.url ==='/home' ? ' text-blue-800' : ''"
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
                     Home
@@ -23,6 +25,7 @@ onMounted(() => {
             <div class="">
                 <Link
                     :href="route('about')"
+                    :class="$page.url ==='/about' ? ' text-blue-800' : ''"
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
                     About
@@ -31,6 +34,7 @@ onMounted(() => {
             <div class="">
                 <Link
                     :href="route('services')"
+                    :class="$page.url ==='/services' ? ' text-blue-800' : ''"
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
                     Services
@@ -39,6 +43,7 @@ onMounted(() => {
             <div class="">
                 <Link
                     :href="route('pages')"
+                    :class="$page.url ==='/pages' ? ' text-blue-800' : ''"
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
                     Pages
@@ -47,6 +52,7 @@ onMounted(() => {
             <div class="">
                 <Link
                     :href="route('blog')"
+                    :class="$page.url ==='/blog' ? ' text-blue-800' : ''"
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
                     Blog
@@ -55,6 +61,7 @@ onMounted(() => {
             <div class="">
                 <Link
                     :href="route('contact')"
+                    :class="$page.url ==='/contact' ? ' text-blue-800' : ''"
                     class="font-semibold hover:text-blue-800 focus:text-blue-800"
                 >
                     Contact
